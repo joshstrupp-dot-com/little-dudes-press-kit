@@ -1,0 +1,253 @@
+/* Font Styles */
+h1,
+.namelock {
+  /* Applying H1 style to the logo as well */
+  color: #000;
+  font-family: "Darumadrop One", sans-serif;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 57%; /* 25.65px */
+  letter-spacing: -0.495px;
+  text-align: center; /* Center hero text */
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #000;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 81%; /* 14.58px */
+  letter-spacing: 3.24px;
+  text-align: center;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+h3 {
+  /* Using H2 style for section titles for consistency */
+  color: #000;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 81%;
+  letter-spacing: 3.24px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e5e1d5;
+  padding-bottom: 10px;
+}
+
+body {
+  color: #000;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5; /* Adjusted for better readability */
+  letter-spacing: -0.252px;
+  background-color: #f8f2da; /* Background color */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Color Variables (Optional but good practice) */
+:root {
+  --bg-color: #f8f2da;
+  --secondary-neutral: #e5e1d5;
+  --green-1: #19553b;
+  --green-2: #c6ca42;
+  --earth-1: #a17843;
+  --earth-2: #f1b312;
+  --warm-1: #f26b4e;
+  --warm-2: #feb38a;
+}
+
+/* Layout & Spacing */
+.content-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+section {
+  margin-bottom: 60px;
+  padding: 20px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Increased opacity of the white background */
+  background-image: url("assets/textures/white-paper-texture.jpg");
+  background-blend-mode: overlay;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("assets/textures/white-paper-texture.jpg");
+  background-blend-mode: overlay;
+  opacity: 0.3; /* Only affects the texture */
+  pointer-events: none;
+  border-radius: 8px;
+  z-index: -1;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+  margin-bottom: 60px;
+  background-color: transparent; /* Hero doesn't need the overlay */
+  box-shadow: none;
+  padding: 0;
+}
+
+.namelock {
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.studio-credit {
+  margin-top: 5px;
+  margin-bottom: 25px;
+  font-size: 11px;
+}
+
+/* Button Style */
+.play-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: var(--green-1);
+  color: var(--bg-color);
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.play-button:hover {
+  background-color: var(--green-2);
+  color: var(--green-1);
+}
+
+/* Placeholders */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.process-grid {
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+.placeholder-image,
+.placeholder-video {
+  background-color: var(--secondary-neutral);
+  border: 1px dashed var(--earth-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--earth-1);
+  font-size: 10px;
+  font-family: "Courier New", monospace;
+}
+
+.placeholder-image.square {
+  aspect-ratio: 1 / 1;
+}
+
+.placeholder-video.aspect-16-9 {
+  aspect-ratio: 16 / 9;
+}
+
+.placeholder-image::after,
+.placeholder-video::after {
+  content: "Placeholder";
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid var(--secondary-neutral);
+  font-size: 10px;
+  color: var(--earth-1);
+}
+
+/* Cursor Flair Effect */
+.cursor-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Make sure it doesn't interfere with clicks */
+  z-index: 1000; /* Keep it above everything else */
+}
+
+.flair {
+  position: fixed;
+  opacity: 0;
+  width: 40px; /* Increased size from the original 30px */
+  pointer-events: none; /* Ensure they don't interfere with clicking */
+  z-index: 1000;
+  will-change: transform; /* Optimize for animations */
+}
+
+/* Basic Responsive Adjustments */
+@media (max-width: 600px) {
+  h1,
+  .namelock {
+    font-size: 35px;
+  }
+
+  h2,
+  h3 {
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+
+  body {
+    font-size: 11px;
+  }
+
+  .content-wrapper {
+    padding: 20px 15px;
+  }
+
+  .hero {
+    min-height: 50vh;
+  }
+
+  .image-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+  }
+
+  .flair {
+    width: 30px; /* Smaller on mobile */
+  }
+}
