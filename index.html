@@ -53,13 +53,16 @@
         <img src="assets/namelock.svg" alt="LITTLE DUDES" class="namelock" />
         <h2>Friendly. Frenzied. Fun.</h2>
         <p class="studio-credit">A game by Imperfect Studios™</p>
-        <a href="https://google.com" target="_blank" class="play-button"
+        <a
+          href="https://gamebshopkeepers.netlify.app/"
+          target="_blank"
+          class="play-button"
           >Play</a
         >
       </header>
 
       <section class="studio-description">
-        <h3>About the Studio</h3>
+        <h3>About Imperfect Studios™</h3>
         <p>
           <i
             >Imperfect Studios™ is a charmingly imperfect crew of creatives
@@ -73,7 +76,7 @@
       </section>
 
       <section class="in-game-images">
-        <h3>In-Game Screenshots</h3>
+        <h3>Screenshots</h3>
         <div
           class="slider"
           style="--width: 300px; --height: 200px; --quantity: 3"
@@ -96,43 +99,22 @@
                 src="assets/screenshots/screenshot3.png"
                 alt="Game Screenshot 3"
               />
-            <!-- </div>
+            </div>
             <div class="item" style="--position: 4">
-              <img
-                src="assets/screenshots/screenshot4.jpg"
-                alt="Game Screenshot 4"
-              />
+              <video
+                style="width: 100%; height: 100%; object-fit: cover"
+                autoplay
+                loop
+                muted
+                playsinline
+              >
+                <source
+                  src="assets/screenshots/blink-bakery.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
             </div>
-            <div class="item" style="--position: 5">
-              <img
-                src="assets/screenshots/screenshot5.jpg"
-                alt="Game Screenshot 5"
-              />
-            </div>
-            <div class="item" style="--position: 6">
-              <img
-                src="assets/screenshots/screenshot6.jpg"
-                alt="Game Screenshot 6"
-              />
-            </div>
-            <div class="item" style="--position: 7">
-              <img
-                src="assets/screenshots/screenshot7.jpg"
-                alt="Game Screenshot 7"
-              />
-            </div>
-            <div class="item" style="--position: 8">
-              <img
-                src="assets/screenshots/screenshot8.jpg"
-                alt="Game Screenshot 8"
-              />
-            </div>
-            <div class="item" style="--position: 9">
-              <img
-                src="assets/screenshots/screenshot9.jpg"
-                alt="Game Screenshot 9"
-              />
-            </div> -->
           </div>
         </div>
       </section>
@@ -156,29 +138,42 @@
 
       <section class="video-section">
         <h3>Trailer</h3>
-        <div class="placeholder-video aspect-16-9"></div>
+        <video class="aspect-16-9" controls>
+          <source
+            src="assets/video-trailer/dudes-video-trailer-1_2.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
       </section>
 
       <section class="social-media">
         <h3>Social Media Assets</h3>
         <div class="image-grid">
-          <div class="placeholder-image square"></div>
-          <div class="placeholder-image square"></div>
-          <div class="placeholder-image square"></div>
+          <img src="assets/social-media/choose.jpg" alt="Social Media Asset" />
+          <video
+            class="square"
+            controls
+            style="width: 100%; height: 100%; object-fit: cover"
+          >
+            <source src="assets/social-media/run.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <img src="assets/social-media/caption.jpg" alt="Social Media Asset" />
         </div>
       </section>
 
-      <section class="process-gallery">
-        <h3>Process</h3>
-        <div class="image-grid process-grid">
-          <div class="placeholder-image square"></div>
-          <div class="placeholder-image square"></div>
-          <div class="placeholder-image square"></div>
-          <div class="placeholder-image square"></div>
-          <div class="placeholder-image square"></div>
-          <div class="placeholder-image square"></div>
+      <div class="process-gallery">
+        <h3>Behind the Scenes</h3>
+        <div class="image-grid">
+          <img src="assets/process/placeholder1.jpg" alt="Process 1" />
+          <img src="assets/process/placeholder2.jpg" alt="Process 2" />
+          <img src="assets/process/placeholder3.jpg" alt="Process 3" />
+          <img src="assets/process/placeholder4.jpg" alt="Process 4" />
+          <img src="assets/process/placeholder5.jpg" alt="Process 5" />
+          <img src="assets/process/placeholder6.jpg" alt="Process 6" />
         </div>
-      </section>
+      </div>
 
       <footer>
         <p>&copy; 2024 Imperfect Studios. All rights reserved.</p>
